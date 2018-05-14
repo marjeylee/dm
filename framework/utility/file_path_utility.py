@@ -45,7 +45,7 @@ def get_all_files_under_directory(directory):
 
 
 if __name__ == '__main__':
-    # data_path = combine_file_path('./national_medicine/data')
-    # files = get_all_files_under_directory(data_path)
-    # print(files)
+    data_path = combine_file_path('./national_medicine/data')
+    files = get_all_files_under_directory(data_path)
+    print(files)
     pass

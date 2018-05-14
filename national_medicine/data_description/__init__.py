@@ -27,7 +27,7 @@ if __name__ == '__main__':
     f_data = get_format_data()
     medicinal_materials_dict = quantity_statistics(f_data, '处方+')
     usage_dict = quantity_statistics(f_data, '主治')
-    treatment_dict = quantity_statistics(f_data, '功能')
+    treatment_dict= quantity_statistics(f_data, '功能')
     medicinal_value = list(medicinal_materials_dict.values())
     range_info = get_range(medicinal_value)  # 极差信息
     std = get_standard_deviation(medicinal_value)  # 标准差

@@ -40,5 +40,20 @@ def get_format_data():
     return loads_file_to_object(json_files)
 
 
+def get_clean_data():
+    """
+    获得可用的数据。
+    数据描述：获得格式化过的方剂
+    :return:
+    """
+    f_data = get_format_data()
+    for f in f_data:
+        f['materials'] = f['content']['处方+']
+        f['usage'] = f['content']['主治']
+        f['treatment'] = f['content']['功能']
+        del f['content']
+    return f_data
+
+
 if __name__ == '__main__':
-    pass
+    c_data = get_clean_data()

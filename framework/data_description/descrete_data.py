@@ -2,6 +2,8 @@
 """
 离散数据描述
 """
+import math
+
 __author__ = 'l'
 __date__ = '2018/5/10'
 
@@ -50,18 +52,20 @@ def get_standard_deviation(value_list):
     return np.std(arr)
 
 
-def get_variance(value):
+def get_variance(value_list):
     """
     标准差
-    :param value:
+    :param value_list:
     :return:
     """
-    pass
+    value = get_standard_deviation(value_list)
+    return math.pow(value, 2)
 
 
 if __name__ == '__main__':
     ll = [1, 2, 4, 5, 6, 3, 2, 2, 1, 2, 2, 2, 2, 2]
     a = list_quantity_statistics([1, 2, 34, 4, 5, 6, 3, 2, 2, 1, 2, 2, 2, 2, 2, 1])
     rang = get_range(ll)
-    std = get_variance(ll)
+    std = get_standard_deviation(ll)
+    variance = get_variance(ll)
     print(std)
